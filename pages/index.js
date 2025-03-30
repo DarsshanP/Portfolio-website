@@ -43,9 +43,11 @@ export default function Home() {
               Software Developer
             </h3>
             <p className="text-md py-5 leading-8 text-gray-800 md:text-xl max-w-xl mx-auto dark:text-gray-300">
-              Junior software developer specializing in full-stack development,
-              delivering innovative solutions with efficient code. Passionate
-              about technology and continually learning and growing.
+              First-year BA Computer Science undergraduate at the University of Exeter, with a 
+              strong foundation in full-stack development using Python, Java, JavaScript, PHP, and more.
+              Experienced in both individual and collaborative projects, effectively using communication,
+              teamwork, and leadership skills. Familiar with agile methodologies, including daily stand-ups 
+              and pair programming, to consistently contribute to the success of every project I undertake.
             </p>
           </div>
           <div className="text-5xl flex justify-center gap-16 py-3 mt-10 text-gray-600 dark:text-gray-300">
