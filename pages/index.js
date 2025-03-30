@@ -84,11 +84,11 @@ export default function Home() {
               <span className="text-teal-500"> computer science </span> at
               the University of Exeter. Alongside my studies, I am leading the
               development of a Resource Management System for Critical Kit in order
-              to streamline their workflow. I'm always looking for creative solutions
+              to streamline their workflow. I&apos;m always looking for creative solutions
               and have a strong desire to learn and grow as a developer.
             </p>
             <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-300">
-              Some fun facts about me; I'm interested in game development and have been working on
+              Some other facts about me: I love game development and have been working on
               making my own game as a hobby. I also love to stay active by going to the gym and rock climbing.
             </p>
           </div>
