@@ -15,6 +15,13 @@ import { useState } from "react";
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
+
+  const [activeProject, setActiveProject] = useState(null);
+
+  const handleToggle = (project) => {
+    setActiveProject(activeProject === project ? null : project);
+  };
+
   return (
     <div className={darkMode ? "dark" : ""}>
       <Head>
@@ -57,7 +64,7 @@ export default function Home() {
               <AiFillLinkedin className="scale-100 hover:scale-105 ease-in duration-200" />
             </a>
             <a
-              href="https://github.com/DarthShan"
+              href="https://github.com/DarsshanP"
               target="_blank"
               rel="noreferrer"
               alt="GitHub"
@@ -73,67 +80,55 @@ export default function Home() {
           <div>
             <h3 className="text-3xl py-1 dark:text-white">About Me</h3>
             <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-300">
-              I&apos;m a
-              <span className="text-teal-500"> junior software developer </span>
-              with a desire to make creative solutions using new cutting-edge
-              technology. I enjoy turning complex problems into simple,
-              efficient code. I have a strong foundation in{" "}
-              <span className="text-teal-500">full-stack development</span> and
-              a commitment to writing maintainable, scalable code. I&apos;m
-              always eager to learn and grow as a developer.
+              I&apos;m currently an undergraduate student studying
+              <span className="text-teal-500"> computer science </span> at
+              the University of Exeter. Alongside my studies, I am leading the
+              development of a Resource Management System for Critical Kit in order
+              to streamline their workflow. I'm always looking for creative solutions
+              and have a strong desire to learn and grow as a developer.
             </p>
             <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-300">
-              A couple other things about me; in my free time I enjoy drumming
-              to my favourite songs. I&apos;m also a big fan of video games,
-              especially story-driven games, finally, I love staying active by
-              going to the gym.
+              Some fun facts about me; I'm interested in game development and have been working on
+              making my own game as a hobby. I also love to stay active by going to the gym and rock climbing.
             </p>
           </div>
           <div className="lg:flex gap-10">
+          <div className="text-center shadow-lg p-10 rounded-xl my-10">
+              <div className="flex justify-center">
+                <Image src={backend} width={100} height={100} alt="" />
+              </div>
+              <p className="py-2 dark:text-white">
+                Well-versed in multiple programming languages, while particularly skilled in Python and JavaScript.
+              </p>
+              <h3 className="text-lg font-medium pt-8 pb-2 dark:text-white">
+                Languages I&apos;m familiar with:
+              </h3>
+              <p className="text-gray-800 dark:text-gray-300 py-1">Python</p>
+              <p className="text-gray-800 dark:text-gray-300 py-1">Java</p>
+              <p className="text-gray-800 dark:text-gray-300 py-1">JavaScript</p>
+              <p className="text-gray-800 dark:text-gray-300 py-1">PHP</p>
+              <p className="text-gray-800 dark:text-gray-300 py-1">MySQL</p>
+            </div>
             <div className="text-center shadow-lg p-10 rounded-xl my-10">
               <div className="flex justify-center">
                 <Image src={frontend} width={100} height={100} alt="" />
               </div>
               <h3 className="text-lg font-medium pt-8 pb-2 dark:text-white">
-                Front-End Development
+                Full-Stack Development
               </h3>
               <p className="py-2 dark:text-white">
-                Experience in frontend design and development with HTML, CSS,
-                JavaScript and frameworks such as React, React Native, Next.js
-                to create user-friendly interfaces for web and mobile apps.
+                Experience in designing and developing user-friendly interfaces, as well as
+                building server-side systems, integrating databases, and working with REST APIs
+                to ensure seamless and secure user experiences.
               </p>
               <h4 className="py-4 text-teal-600">
-                Some front-end tools I&apos;m familiar with
+                Tools/Frameworks I&apos;m familiar with: 
               </h4>
-              <p className="text-gray-800 dark:text-gray-300 py-1">
-                React/React-Native
-              </p>
-              <p className="text-gray-800 dark:text-gray-300 py-1">Axios</p>
-              <p className="text-gray-800 dark:text-gray-300 py-1">Next.js</p>
-              <p className="text-gray-800 dark:text-gray-300 py-1">
-                Tailwindcss
-              </p>
-              <p className="text-gray-800 dark:text-gray-300 py-1">HTML5</p>
-            </div>
-            <div className="text-center shadow-lg p-10 rounded-xl my-10">
-              <div className="flex justify-center">
-                <Image src={backend} width={100} height={100} alt="" />
-              </div>
-              <h3 className="text-lg font-medium pt-8 pb-2 dark:text-white">
-                Back-End Development
-              </h3>
-              <p className="py-2 dark:text-white">
-                Experience in creating server-side systems, as well as utilizing
-                databases and REST APIs to manage and manipulate data to ensure
-                a seamless and secure user experience.
-              </p>
-              <h4 className="py-4 text-teal-600">
-                Some back-end tools I&apos;m familiar with
-              </h4>
-              <p className="text-gray-800 dark:text-gray-300 py-1">Express</p>
-              <p className="text-gray-800 dark:text-gray-300 py-1">Nodejs</p>
+              <p className="text-gray-800 dark:text-gray-300 py-1">React</p>
+              <p className="text-gray-800 dark:text-gray-300 py-1">CakePHP</p>
+              <p className="text-gray-800 dark:text-gray-300 py-1">Node</p>
+              <p className="text-gray-800 dark:text-gray-300 py-1">MySQL</p>
               <p className="text-gray-800 dark:text-gray-300 py-1">GraphQL</p>
-              <p className="text-gray-800 dark:text-gray-300 py-1">MongoDB</p>
             </div>
           </div>
         </section>
@@ -141,24 +136,35 @@ export default function Home() {
           <div>
             <h3 className="text-3xl py-1 dark:text-white">Portfolio</h3>
             <p className="text-gray-800 dark:text-gray-300 py-1">
-              Click on an image to view the github repository
+              Click on an image to view more details.
             </p>
           </div>
           <div className="flex flex-col gap-10 py-10 lg:flex-row">
             <div className="basis-1/3 flex-1">
-              <a
-                href="https://github.com/AngelikaM-T/NipToLoo"
-                target="_blank"
-                rel="noreferrer"
-              >
                 <Image
                   src={niptooloofinal}
+                  onClick={()=>handleToggle("nip")}
                   className="rounded-lg object-cover scale-100 hover:scale-105 ease-in duration-200"
                   width={"100%"}
                   height={"100%"}
                   alt="The NipToLoo app"
                 />
-              </a>
+                {activeProject === "nip" && (
+                <div className="absolute top-0 left-0 bg-black bg-opacity-80 text-white p-4 rounded-lg z-10 w-full h-full flex items-center justify-center text-center">
+                <p>
+                NipToLoo: A mobile app that helps users find nearby public toilets,
+                built with React Native and real-time map integration.
+                </p>
+                <a
+                  href="https://github.com/DarthShan/NC-Games-Front-End"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="underline text-teal-300 hover:text-teal-400 transition"
+                >
+                  View on GitHub →
+                </a>
+                </div>
+                )}
             </div>
             <div className="basis-1/3 flex-1">
               <a
