@@ -97,12 +97,15 @@ export default function Home() {
               <div className="flex justify-center">
                 <Image src={backend} width={100} height={100} alt="" />
               </div>
+              <h3 className="text-lg font-medium pt-8 pb-2 dark:text-white">
+                Programming Languages
+              </h3>
               <p className="py-2 dark:text-white">
                 Well-versed in multiple programming languages, while particularly skilled in Python and JavaScript.
               </p>
-              <h3 className="text-lg font-medium pt-8 pb-2 dark:text-white">
+              <h4 className="py-4 text-teal-600">
                 Languages I&apos;m familiar with:
-              </h3>
+              </h4>
               <p className="text-gray-800 dark:text-gray-300 py-1">Python</p>
               <p className="text-gray-800 dark:text-gray-300 py-1">Java</p>
               <p className="text-gray-800 dark:text-gray-300 py-1">JavaScript</p>
@@ -140,46 +143,59 @@ export default function Home() {
             </p>
           </div>
           <div className="flex flex-col gap-10 py-10 lg:flex-row">
-            <div className="basis-1/3 flex-1">
-                <Image
-                  src={niptooloofinal}
-                  onClick={()=>handleToggle("nip")}
-                  className="rounded-lg object-cover scale-100 hover:scale-105 ease-in duration-200"
-                  width={"100%"}
-                  height={"100%"}
-                  alt="The NipToLoo app"
-                />
-                {activeProject === "nip" && (
-                <div className="absolute top-0 left-0 bg-black bg-opacity-80 text-white p-4 rounded-lg z-10 w-full h-full flex items-center justify-center text-center">
-                <p>
-                NipToLoo: A mobile app that helps users find nearby public toilets,
-                built with React Native and real-time map integration.
-                </p>
-                <a
-                  href="https://github.com/DarthShan/NC-Games-Front-End"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="underline text-teal-300 hover:text-teal-400 transition"
-                >
-                  View on GitHub →
-                </a>
+            {/* NipToLoo Project */}
+            <div className="basis-1/3 flex-1 relative">
+              <Image
+                src={niptooloofinal}
+                onClick={() => handleToggle("nip")}
+                className="rounded-lg object-cover scale-100 hover:scale-105 ease-in duration-200 cursor-pointer"
+                width={"100%"}
+                height={"100%"}
+                alt="The NipToLoo app"
+              />
+              {activeProject === "nip" && (
+                <div className="absolute top-0 left-0 bg-black bg-opacity-80 text-white p-6 rounded-lg z-10 w-500 h-500 flex flex-col items-center justify-center text-center space-y-4">
+                  <p>
+                    NipToLoo: A mobile app that helps users find nearby public toilets,
+                    built with React Native and real-time map integration.
+                  </p>
+                  <a
+                    href="https://github.com/AngelikaM-T/NipToLoo"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="underline text-teal-300 hover:text-teal-400 transition"
+                  >
+                    View on GitHub →
+                  </a>
                 </div>
-                )}
+              )}
             </div>
-            <div className="basis-1/3 flex-1">
-              <a
-                href="https://github.com/DarthShan/NC-Games-Front-End"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <Image
-                  src={reviewzone}
-                  className="rounded-lg object-cover scale-100 hover:scale-105 ease-in duration-200"
-                  width={"100%"}
-                  height={"100%"}
-                  alt="The ReviewZone website"
-                />
-              </a>
+            {/* ReviewZone Project */}
+            <div className="basis-1/3 flex-1 relative">
+              <Image
+                src={reviewzone}
+                onClick={() => handleToggle("review")}
+                className="rounded-lg object-cover scale-100 hover:scale-105 ease-in duration-200 cursor-pointer"
+                width={"100%"}
+                height={"100%"}
+                alt="The ReviewZone website"
+              />
+              {activeProject === "review" && (
+                <div className="absolute top-0 left-0 bg-black bg-opacity-80 text-white p-6 rounded-lg z-10 w-full h-full flex flex-col items-center justify-center text-center space-y-4">
+                  <p>
+                    ReviewZone: A game review site built with React and REST APIs,
+                    allowing users to browse, rate, and discuss games.
+                  </p>
+                  <a
+                    href="https://github.com/DarthShan/NC-Games-Front-End"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="underline text-teal-300 hover:text-teal-400 transition"
+                  >
+                    View on GitHub →
+                  </a>
+                </div>
+              )}
             </div>
           </div>
         </section>
