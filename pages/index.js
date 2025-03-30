@@ -66,7 +66,7 @@ export default function Home() {
             </a>
           </div>
           <div className="relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 mt-20 mb-20 overflow-hidden md:h-96 md:w-96">
-            <Image src={profile2} alt="Profile_picture" priority={true} className="relative -top-10"/>
+            <Image src={profile2} alt="Profile_picture" priority={true} className="relative -top-15"/>
           </div>
         </section>
         <section>
