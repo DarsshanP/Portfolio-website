@@ -49,14 +49,6 @@ export default function Home() {
           </div>
           <div className="text-5xl flex justify-center gap-16 py-3 mt-10 text-gray-600 dark:text-gray-300">
             <a
-              href="https://twitter.com/DarsshanPal"
-              target="_blank"
-              rel="noreferrer"
-              alt="Twitter"
-            >
-              <AiFillTwitterCircle className="scale-100 hover:scale-105 ease-in duration-200" />
-            </a>
-            <a
               href="https://linkedin.com/in/darsshan-palaram-776783261"
               target="_blank"
               rel="noreferrer"
